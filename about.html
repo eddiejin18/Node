@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Node</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="about-container">
+        <div class="about-content">
+            <a href="index.html" class="back-arrow">←</a>
+            <p class="about-paragraph">Node aims to be the platform that helps you realize your potential.</p>
+            
+            <p class="about-paragraph about-spacer"></p>
+            
+            <p class="about-paragraph">Node is a fellowship program at UC San Diego for students interested in startups. Each year, we select ten ambitious and talented undergraduate students on campus. Fellows are paired one to one with a mentor, gain access to a lifelong community, and receive exclusive opportunities including jobs, dinners, events, and more.</p>
+            
+            <p class="about-paragraph about-spacer"></p>
+            
+            <p class="about-paragraph">UCSD has strong students, but those interested in startups are often scattered with limited access to focused guidance or peers who share similar goals. Node was created to bring these students together, offer support, and make it easier to explore fast paced paths with clarity and confidence. Fellows meet throughout the year, receive practical advice, and learn from people with real experience in early stage environments.</p>
+            
+            <p class="about-paragraph about-spacer"></p>
+            
+            <p class="about-paragraph">The fellowship centers on a community that grows each year as new classes join and alumni move into internships, companies, and new roles. Fellows stay connected through our Slack, support one another, and gather at an annual weekend retreat with all current members and alumni. We believe a strong community brings out the best in people, and Node is built to support you throughout your lifetime as the network compounds year over year.</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-left">
+            <a href="about.html" class="footer-link">info</a>
+            <span class="footer-separator">·</span>
+            <a href="#" class="footer-link">contact</a>
+            <span class="footer-separator">·</span>
+            <a href="#" class="footer-link">apply</a>
+        </div>
+        <div class="footer-right">
+            <span class="location">La Jolla, CA</span>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const paragraphs = document.querySelectorAll('.about-paragraph');
+            const footerElement = document.querySelector('.footer');
+            let delay = 100; // Start delay in milliseconds
+            
+            paragraphs.forEach((paragraph) => {
+                setTimeout(() => {
+                    paragraph.classList.add('visible');
+                }, delay);
+                delay += 80; // 80ms delay between each paragraph
+            });
+            
+            // Calculate when all paragraphs have finished fading in
+            // Last paragraph starts at: 100 + (paragraphs.length - 1) * 80
+            // Start footer fade-in partway through the last paragraph's fade
+            const lastParagraphStart = 100 + (paragraphs.length - 1) * 80;
+            const fadeInDuration = 600; // 0.6s in milliseconds
+            const footerDelay = lastParagraphStart + (fadeInDuration * 0.5); // Start halfway through last paragraph fade
+            
+            setTimeout(() => {
+                footerElement.classList.add('visible');
+            }, footerDelay);
+        });
+    </script>
+</body>
+</html>
+
