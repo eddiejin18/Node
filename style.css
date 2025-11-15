@@ -183,6 +183,17 @@ body {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
+        padding: 20px 15px;
+    }
+    
+    .terminal-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .terminal-line {
+        flex-wrap: wrap;
+        gap: 4px;
     }
     
     .prompt,
@@ -190,23 +201,94 @@ body {
         font-size: 16px;
     }
     
+    .typed-text {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .cursor {
+        width: 8px;
+        height: 1.1em;
+    }
+    
+    .about-container {
+        padding: 20px 15px;
+    }
+    
     .about-paragraph {
         font-size: 16px;
+        line-height: 1.7;
     }
     
     .back-arrow {
-        font-size: 20px;
+        position: relative;
+        right: auto;
+        left: 0;
+        margin-bottom: 15px;
+        display: block;
+        font-size: 18px;
+    }
+    
+    .about-content {
+        padding-top: 0;
     }
     
     .footer {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
-        padding: 20px;
+        gap: 12px;
+        padding: 20px 15px;
+    }
+    
+    .footer-left {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .footer-link {
+        font-size: 14px;
+    }
+    
+    .footer-separator {
+        font-size: 14px;
+    }
+    
+    .location {
+        font-size: 14px;
     }
     
     .footer-right {
         align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+    
+    .terminal-line {
+        font-size: 14px;
+    }
+    
+    .prompt,
+    .typed-text {
+        font-size: 14px;
+    }
+    
+    .about-paragraph {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .footer {
+        padding: 15px 10px;
+    }
+    
+    .footer-link,
+    .footer-separator,
+    .location {
+        font-size: 13px;
     }
 }
 
